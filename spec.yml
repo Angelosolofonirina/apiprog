@@ -1,0 +1,22 @@
+openapi: 3.0.3
+info:
+  title: STD21097
+  version: "1.2"
+servers:
+  - url: http://STD21097.com
+paths:
+  /students:
+    get:
+      summary: Get all students
+      description: Returns list of students
+      operationId: getAllStudents
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: integer
+                  format: int32
